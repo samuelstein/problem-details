@@ -1,22 +1,25 @@
-package de.samuelstein.dto.error;
+package dto;
+
+import lombok.Data;
+import lombok.NonNull;
+import lombok.Value;
 
 import java.net.URI;
-import lombok.Data;
-import org.springframework.lang.Nullable;
 
 /**
  * Problem details implementation (RFC 7807) for HTTP API to carry machine-readable details of errors in a HTTP response
  * to avoid the need to define new error response formats for HTTP APIs.
  */
 
+//@Value
 @Data
 public class ProblemDetails {
 
-  Integer status;
-  String title;
-  @Nullable
-  String detail;
-  String instance;
-  @Nullable
-  URI type;
+    @NonNull
+    Integer status;
+    @NonNull
+    String title;
+    String detail;
+    String instance;
+    URI type;
 }
