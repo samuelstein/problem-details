@@ -7,6 +7,7 @@
     <groupId>samuelstein.de</groupId>
     <artifactId>problem-details</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <name>problem-details-http</name>
     <description>Demo project about Problem Details for HTTP APIs</description>
