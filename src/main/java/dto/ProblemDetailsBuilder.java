@@ -1,6 +1,7 @@
 package dto;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.net.URI;
 
@@ -8,12 +9,13 @@ import java.net.URI;
  * Dedicated problem details builder
  */
 @AllArgsConstructor
+@RequiredArgsConstructor
 public class ProblemDetailsBuilder {
 
-    private final String message;
     private final Integer statusCode;
-    private final String requestId;
-    private final String detailMessage;
+    private final String message;
+    private String requestId;
+    private String detailMessage;
 
 
     public ProblemDetails build() {
